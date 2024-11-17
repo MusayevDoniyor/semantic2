@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Doniyor Coder" />
+
+    <link
+      rel="shortcut icon"
+      href="https://picsum.photos/100"
+      type="image/x-icon"
+    />
+
+    <title>Semaintic 2</title>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100%;
+        min-height: 100vh;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+        font-size: clamp(1.4rem, 2vw, 2.4rem);
+        color: #fff;
+      }
+
+      img {
+        width: 100%;
+        display: block;
+      }
+
+      .container {
+        width: 60%;
+        max-width: 1200px;
+        background-color: lightcoral;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        gap: 15px;
+      }
+
+      header,
+      footer {
+        background-color: cadetblue;
+        padding: 1.8rem;
+        border-radius: 10px;
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+
+      main {
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+      }
+
+      aside {
+        background-color: lightseagreen;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        border-radius: 8px;
+        font-size: 1.6rem;
+      }
+
+      article {
+        background-color: rgb(248, 64, 64);
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 15px;
+        padding: 1.5rem;
+        border-radius: 8px;
+      }
+
+      article > div {
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+
+      .images {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+      }
+
+      .images img {
+        width: 100%;
+        max-width: 140px;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 5px;
+        background-color: #ddd;
+      }
+
+      @media screen and (max-width: 1200px) {
+        .images img {
+          max-width: 120px;
+          height: 120px;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        main {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        aside {
+          font-size: 1.5rem;
+        }
+
+        .images {
+          gap: 10px;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .container {
+          width: 90%;
+        }
+        .images {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .images img {
+          max-width: 100%;
+          height: auto;
+        }
+
+        aside,
+        article {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>Header</header>
+
+      <main>
+        <aside>Aside</aside>
+
+        <article>
+          <div>Article</div>
+
+          <div class="images">
+            <img src="https://picsum.photos/140" alt="Image" />
+            <img src="https://picsum.photos/140" alt="Image" />
+            <img src="https://picsum.photos/140" alt="Image" />
+          </div>
+        </article>
+      </main>
+
+      <footer>Footer</footer>
+    </div>
+  </body>
+</html>
